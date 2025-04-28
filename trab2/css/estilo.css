@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #670e04; /* Vermelho escuro */
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00; /* Amarelo no hover */
+    text-decoration: underline;
+}
+
+section {
+    min-height: 100vh;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+section:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border: 3px solid #ff4136;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #670e04; /* Mudando para vermelho do tema */
+    margin-bottom: 15px;
+}
+
+p {
+    max-width: 800px;
+    font-size: 1.1rem;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+/* Texto da seção Tripulação alinhado à esquerda */
+#tripulacao p {
+    text-align: left;
+}
+
+/* Ajuste para imagens ficarem centralizadas, mas texto ficar separado */
+#tripulacao {
+    align-items: flex-start;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+footer {
+    background-color: #000000;
+    color: #f03d3d;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #tripulacao {
+        align-items: center;
+        padding: 20px;
+    }
+
+    #tripulacao p {
+        text-align: center;
+    }
+}
